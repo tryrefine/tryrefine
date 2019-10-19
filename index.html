@@ -358,7 +358,7 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<div class="copyright">
-                        <p>Copyright &copy; 2017-<span id="curentYear"></span>.恒久口腔 版权所有</p>
+                        <p>Copyright &copy; 2017-<span id="currentYear"></span>.恒久口腔 版权所有</p>
 					</div>
 				</div><!-- /.col-md-12 -->
 			</div><!-- /.row -->
@@ -395,7 +395,13 @@
 <script type="text/javascript" src="javascript/jquery.themepunch.revolution.min.js"></script>
 <script type="text/javascript" src="javascript/slider.js"></script>
 <script language="JavaScript">
-    document.getElementById("curentYear").innerText = new Date().getFullYear();
+    var currentYear = 2019;
+
+    if (currentYear < new Date().getFullYear()) {
+        currentYear = new Date().getFullYear();
+    }
+
+    document.getElementById("currentYear").innerText = currentYear;
 </script>
 </body>
 </html>
